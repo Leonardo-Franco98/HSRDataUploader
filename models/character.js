@@ -5,7 +5,6 @@ const characterSchema = mongoose.Schema({
   path: String,
   element: String,
   rarity: Number,
-  image: String,
   story: String,
   voice: {
     japanese: String,
@@ -20,9 +19,7 @@ const characterSchema = mongoose.Schema({
   eidolons: [
     {
       name: String,
-      effect: String,
-      icon: String,
-      image: String
+      effect: String
     }
   ],
   traces: {
@@ -35,22 +32,19 @@ const characterSchema = mongoose.Schema({
     large: [
       {
         name: String,
-        effect: String,
-        image: String
+        effect: String
       }
     ],
     core: {
       technique: {
         name: String,
         effect: String,
-        image: String,
         tag: String
       },
       basic: [
         {
           name: String,
           effect: String,
-          image: String,
           scaling: [[Number]],
           generation: Number,
           tag: String
@@ -60,7 +54,6 @@ const characterSchema = mongoose.Schema({
         {
           name: String,
           effect: String,
-          image: String,
           scaling: [[Number]],
           generation: Number,
           tag: String
@@ -70,7 +63,6 @@ const characterSchema = mongoose.Schema({
         {
           name: String,
           effect: String,
-          image: String,
           scaling: [[Number]],
           generation: Number,
           tag: String,
@@ -84,7 +76,6 @@ const characterSchema = mongoose.Schema({
         {
           name: String,
           effect: String,
-          image: String,
           scaling: [[Number]],
           generation: Number,
           tag: String

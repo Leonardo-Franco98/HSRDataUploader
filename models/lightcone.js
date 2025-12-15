@@ -5,7 +5,6 @@ const lightconeSchema = mongoose.Schema({
   path: String,
   rarity: Number,
   flavorText: String,
-  image: String,
   effectName: String,
   effect: String,
   superImpositions: [[Number]],

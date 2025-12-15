@@ -2,30 +2,25 @@ const mongoose = require("mongoose")
 
 const relicSchema = mongoose.Schema({
   name: String,
-  image: String,
   effect2: String,
   effect4: String,
   head: {
     name: String,
-    image: String,
     description: String,
     story: String
   },
   hand: {
     name: String,
-    image: String,
     description: String,
     story: String
   },
   body: {
     name: String,
-    image: String,
     description: String,
     story: String
   },
   feet: {
     name: String,
-    image: String,
     description: String,
     story: String
   }

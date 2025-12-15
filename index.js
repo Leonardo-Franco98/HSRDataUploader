@@ -15,7 +15,7 @@ const uploadData = async () => {
     await mongoose.connect(process.env.MONGODB_INSTANCE)
     console.log('Connected to database successfully!')
   } catch (e) {
-    console.log('An error occurred when trying to connect to MongoDB database', e)
+    console.error('An error occurred when trying to connect to MongoDB database', e)
     return
   }
 
@@ -31,7 +31,7 @@ const createRelics = async () => {
     await Relic.deleteMany({})
     console.log('\n\nRelic collection reset!')
   } catch (e) {
-    console.log('\n\nAn error occurred while trying to reset relic collection', e)
+    console.error('\n\nAn error occurred while trying to reset relic collection', e)
     return
   }
 
@@ -73,7 +73,7 @@ const createPlanarOrnaments = async () => {
     await PlanarOrnament.deleteMany({})
     console.log('\n\nPlanar ornament collection reset!')
   } catch (e) {
-    console.log('\n\nAn error occurred while trying to reset planar ornament collection', e)
+    console.error('\n\nAn error occurred while trying to reset planar ornament collection', e)
     return
   }
 
@@ -111,7 +111,7 @@ const createLightcones = async () => {
     await Lightcone.deleteMany({})
     console.log('\n\nLightcone collection reset!')
   } catch (e) {
-    console.log('\n\nAn error occurred while trying to reset lightcones collection', e)
+    console.error('\n\nAn error occurred while trying to reset lightcones collection', e)
     return
   }
 
@@ -145,7 +145,7 @@ const createCharacters = async () => {
     await Character.deleteMany({})
     console.log('\n\nCharacter collection reset!')
   } catch (e) {
-    console.log('\n\nAn error occurred while trying to reset character collection', e)
+    console.error('\n\nAn error occurred while trying to reset character collection', e)
     return
   }
 

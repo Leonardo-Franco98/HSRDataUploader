@@ -2,17 +2,14 @@ const mongoose = require("mongoose")
 
 const planarOrnamentSchema = mongoose.Schema({
   name: String,
-  image: String,
   effect: String,
   sphere: {
     name: String,
-    image: String,
     description: String,
     story: String
   },
   rope: {
     name: String,
-    image: String,
     description: String,
     story: String
   }
