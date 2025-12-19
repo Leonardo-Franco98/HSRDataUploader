@@ -41,10 +41,10 @@ const createRelics = async () => {
   for (let i = 0; i < relics.length; i++) {
     try {
       await saveImage(relics[i].name, relics[i].image, 'relics')
-      await saveImage(relics[i].head.name + ' - Head', relics[i].head.image, 'relics')
-      await saveImage(relics[i].hand.name + ' - Hand', relics[i].hand.image, 'relics')
-      await saveImage(relics[i].body.name + ' - Body', relics[i].body.image, 'relics')
-      await saveImage(relics[i].feet.name + ' - Feet', relics[i].feet.image, 'relics')
+      await saveImage(relics[i].head.name, relics[i].head.image, 'relics')
+      await saveImage(relics[i].hand.name, relics[i].hand.image, 'relics')
+      await saveImage(relics[i].body.name, relics[i].body.image, 'relics')
+      await saveImage(relics[i].feet.name, relics[i].feet.image, 'relics')
 
       delete relics[i].image
       delete relics[i].head.image
@@ -83,8 +83,8 @@ const createPlanarOrnaments = async () => {
   for (let i = 0; i < planarOrnaments.length; i++) {
     try {
       await saveImage(planarOrnaments[i].name.replace(':', ' +'), planarOrnaments[i].image, 'planarOrnaments')
-      await saveImage(planarOrnaments[i].sphere.name + ' - Sphere', planarOrnaments[i].sphere.image, 'planarOrnaments')
-      await saveImage(planarOrnaments[i].rope.name + ' - Rope', planarOrnaments[i].rope.image, 'planarOrnaments')
+      await saveImage(planarOrnaments[i].sphere.name, planarOrnaments[i].sphere.image, 'planarOrnaments')
+      await saveImage(planarOrnaments[i].rope.name, planarOrnaments[i].rope.image, 'planarOrnaments')
 
       delete planarOrnaments[i].image
       delete planarOrnaments[i].sphere.image
@@ -155,6 +155,7 @@ const createCharacters = async () => {
   for (let i = 0; i < characters.length; i++) {
     try {
       await saveImage(characters[i].name, characters[i].image, 'characters')
+      await saveImage(`${characters[i].name} - Portrait`, characters[i].portrait, 'characters')
 
       delete characters[i].image
 
