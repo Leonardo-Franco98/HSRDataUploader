@@ -201,6 +201,22 @@ const createCharacters = async () => {
         delete characters[i].traces.core.talent[j].image
       }
 
+      if (characters[i].traces.core.memospriteSkill) {
+        for (let j = 0; j < characters[i].traces.core.memospriteSkill.length; j++) {
+          await saveImage(`${characters[i].name} - Memosprite Skill ${j + 1}`, characters[i].traces.core.memospriteSkill[j].image, 'characters')
+
+          delete characters[i].traces.core.memospriteSkill[j].image
+        }
+      }
+
+      if (characters[i].traces.core.memospriteTalent) {
+        for (let j = 0; j < characters[i].traces.core.memospriteTalent.length; j++) {
+          await saveImage(`${characters[i].name} - Memosprite Talent ${j + 1}`, characters[i].traces.core.memospriteTalent[j].image, 'characters')
+
+          delete characters[i].traces.core.memospriteTalent[j].image
+        }
+      }
+
       let newCharacter = new Character(characters[i])
       await newCharacter.save()
 
