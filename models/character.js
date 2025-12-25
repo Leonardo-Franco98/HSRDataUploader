@@ -81,6 +81,24 @@ const characterSchema = mongoose.Schema({
           tag: String
         }
       ],
+      memospriteSkill: [
+        {
+          name: String,
+          effect: String,
+          scaling: [[Number]],
+          generation: Number,
+          tag: String
+        }
+      ],
+      memospriteTalent: [
+        {
+          name: String,
+          effect: String,
+          scaling: [[Number]],
+          generation: Number,
+          tag: String
+        }
+      ],
     }
   }
 })
