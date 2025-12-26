@@ -121,8 +121,10 @@ const createLightcones = async () => {
   for (let i = 0; i < lightcones.length; i++) {
     try {
       await saveImage(lightcones[i].name.replace(':', ' +').replace('?', '~'), lightcones[i].image, 'lightcones')
+      await saveImage(lightcones[i].name.replace(':', ' +').replace('?', '~') + ' - Preview', lightcones[i].preview, 'lightcones')
 
       delete lightcones[i].image
+      delete lightcones[i].preview
 
       let newLightcone = new Lightcone(lightcones[i])
       await newLightcone.save()
