@@ -157,7 +157,7 @@ const createCharacters = async () => {
   for (let i = 0; i < characters.length; i++) {
     try {
       await saveImage(characters[i].name, characters[i].image, 'characters')
-      await saveImage(`${characters[i].name} - Portrait`, characters[i].portrait, 'characters')
+      await saveImage(`${characters[i].name} - Preview`, characters[i].preview, 'characters')
 
       delete characters[i].image
 
