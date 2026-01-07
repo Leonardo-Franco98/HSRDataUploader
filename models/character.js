@@ -5,7 +5,8 @@ const characterSchema = mongoose.Schema({
   path: String,
   element: String,
   rarity: Number,
-  story: String,
+  intro: String,
+  story: [String],
   voice: {
     japanese: String,
     english: String
